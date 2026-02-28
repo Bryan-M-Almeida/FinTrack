@@ -48,10 +48,30 @@
       }
 
       div.menu-container {
-        nav { 
+        nav {
           button {
             @apply text-gray-400 hover:text-ink cursor-pointer;
           }
+        }
+      }
+
+      div.config-container {
+        @apply flex items-center gap-2;
+
+        div.notificacao {
+          @apply relative;
+
+          button {
+            @apply hover:text-primary cursor-pointer bg-surface border-border;
+          }
+        }
+
+        button.btn-menu {
+          @apply bg-surface border-border cursor-pointer hover:text-primary;
+        }
+
+        div.perfil-container{
+          @apply border-border;
         }
       }
     }

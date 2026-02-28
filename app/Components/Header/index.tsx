@@ -1,3 +1,4 @@
+"use client";
 import {
   Bell,
   BellDot,
@@ -5,12 +6,25 @@ import {
   CircleCheck,
   Clock,
   LayoutDashboard,
+  Menu,
   TrendingUp,
+  X,
 } from "lucide-react";
 import "./header.scss";
 
+import { useState } from "react";
+
+interface Notificacao {
+  id: number;
+  mensagem: string;
+}
+
 const Header = () => {
-  const notificacoes = 0;
+  const [notificacoes, setNotificacoes] = useState<Notificacao[]>([
+    { id: 1, mensagem: "teste" },
+  ]);
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -50,7 +64,23 @@ const Header = () => {
             </nav>
 
             <div className="config-container">
-              {notificacoes > 0 ? <BellDot /> : <Bell />}
+              <div className="notificacao">
+                <button aria-label="Notificações">
+                  {notificacoes.length > 0 ? (
+                    <BellDot size={20} />
+                  ) : (
+                    <Bell size={20} />
+                  )}
+                </button>
+              </div>
+
+              <button className="btn-menu" onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
+
+              <div className="perfil-container">
+                <button className="icon-perfil"></button>
+              </div>
             </div>
           </div>
         </div>

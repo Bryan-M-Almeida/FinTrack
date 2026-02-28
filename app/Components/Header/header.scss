@@ -26,5 +26,21 @@ header {
         }
       }
     }
+    div.config-container {
+      div.notificacao {
+        @apply relative;
+        button {
+          @apply p-2.5 border transition-all relative rounded-xl;
+        }
+      }
+
+      button.btn-menu {
+        @apply p-2.5 cursor-pointer border rounded-xl transition-all;
+      }
+
+      div.perfil-container {
+        @apply border-l pl-4 hidden md:flex gap-3 items-center;
+      }
+    }
   }
 }
