@@ -1,0 +1,30 @@
+@use "tailwindcss";
+
+header {
+  @apply sticky top-0 z-50 w-screen px-4 py-4 md:px-8 backdrop-blur-xl border-b;
+  div.container {
+    @apply max-w-7xl mx-auto flex items-center justify-between;
+
+    div.logo-container {
+      @apply flex items-center gap-2;
+
+      div.logo {
+        @apply w-10 h-10 rounded-xl flex items-center justify-center shadow-sm;
+      }
+
+      h1 {
+        @apply text-2xl font-bold tracking-tight;
+      }
+    }
+
+    div.menu-container {
+      @apply flex items-center gap-2 md:gap-6;
+      nav {
+        @apply hidden md:flex items-center gap-1 bg-gray-50 dark:bg-slate-800 p-1 rounded-xl;
+        button {
+          @apply rounded-lg px-4 py-2 text-sm font-bold transition-all flex items-center gap-2;
+        }
+      }
+    }
+  }
+}
