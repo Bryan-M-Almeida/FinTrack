@@ -1,79 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
-
 
 @theme {
   --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-primary: #5B21B6;
-  --color-secondary: #A78BFA;
-  --color-income: #16A34A;
-  --color-expense: #DC2626;
-  --color-bg: #F3F4F6;
+  --color-primary: #5b21b6;
+  --color-secondary: #a78bfa;
+  --color-income: #16a34a;
+  --color-expense: #dc2626;
+  --color-bg: #f3f4f6;
   --color-ink: #111827;
-  --color-surface: #FFFFFF;
-  --color-border: #E2E8F0;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
 }
 
 @theme dark {
-  --color-bg: #0F172A;
-  --color-ink: #F8FAFC;
-  --color-primary: #8B5CF6;
-  --color-secondary: #C4B5FD;
-  --color-surface: #1E293B;
+  --color-bg: #0f172a;
+  --color-ink: #f8fafc;
+  --color-primary: #8b5cf6;
+  --color-secondary: #c4b5fd;
+  --color-surface: #1e293b;
   --color-border: #334155;
 }
 
 @layer base {
   body {
     @apply bg-bg text-ink font-sans antialiased transition-colors duration-300;
+
+    main {
+      @apply p-6;
+    }
   }
 
   header {
     @apply bg-surface/80 border-border;
-
-    div.container {
-
-      div.logo-container {
-        div.logo {
-          @apply bg-primary shadow-primary;
-        }
-
-        h1 {
-          @apply text-ink;
-
-          span {
-            @apply text-primary;
-          }
-        }
-      }
-
-      div.menu-container {
-        nav {
-          button {
-            @apply text-gray-400 hover:text-ink cursor-pointer;
-          }
-        }
-      }
-
-      div.config-container {
-        @apply flex items-center gap-2;
-
-        div.notificacao {
-          @apply relative;
-
-          button {
-            @apply hover:text-primary cursor-pointer bg-surface border-border;
-          }
-        }
-
-        button.btn-menu {
-          @apply bg-surface border-border cursor-pointer hover:text-primary;
-        }
-
-        div.perfil-container{
-          @apply border-border;
-        }
-      }
-    }
   }
 }
