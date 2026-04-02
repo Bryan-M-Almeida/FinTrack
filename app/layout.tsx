@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.scss";
-import Header from "./components/Header";
+import Header from "@/components/Header";
+import "@/styles/globals.scss"
 
 export const metadata: Metadata = {
   title: "FinTrack",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="antialiased">
+      <body className="">
         <Header />
         <main>{children}</main>
       </body>

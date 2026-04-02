@@ -1,0 +1,58 @@
+@use "tailwindcss";
+
+header {
+  @apply flex fixed top-0 left-0 px-4 py-4 md:px-8 w-full z-50 backdrop-blur-xl bg-[#1E293B]/80 border-[#334155] border-b;
+
+  div.container {
+    @apply max-w-7xl mx-auto flex items-center justify-between;
+
+    div.logo-container {
+      @apply flex items-center gap-2;
+
+      span.logo {
+        @apply w-10 h-10 bg-[#8B5CF6] rounded-xl flex items-center justify-center shadow-lg shadow-[#8B5CF6]/20;
+      }
+      h1 {
+        @apply text-2xl font-bold tracking-tight text-[#F8FAFC];
+
+        span {
+          @apply text-[#8B5CF6];
+        }
+      }
+    }
+
+    div.container-btns {
+      @apply flex items-center gap-2 md:gap-6;
+
+      div.ofensiva {
+        @apply hidden md:flex items-center gap-2 bg-slate-800 px-3 py-1.5 rounded-full;
+
+        div.fogo {
+          @apply w-8 h-8 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center;
+        }
+        span {
+          @apply text-sm font-bold text-[#F8FAFC] tracking-widest;
+        }
+      }
+
+      nav {
+        @apply md:flex items-center justify-between hidden gap-1 bg-slate-800 p-1 rounded-xl;
+
+        .btnLink {
+          @apply flex px-4 py-2 rounded-lg text-sm font-bold transition-all items-center gap-2 bg-[#1E293B] shadow-sm tracking-widest;
+        }
+      }
+
+      div.conta-container {
+        @apply flex items-center gap-2;
+        div.notificacao {
+          @apply relative;
+
+          button {
+            @apply p-2.5 bg-[#1E293B] border border-[#334155] rounded-xl hover:text-[#8B5CF6] transition-all relative cursor-pointer;
+          }
+        }
+      }
+    }
+  }
+}
